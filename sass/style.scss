@@ -186,14 +186,32 @@
     }
     .row-container {
       @include width_height(100%, 74vh);
+      .elements-image{
+        width: 100%;
+        @include flexbox(space-between, center);
+        flex-direction: row;
+      }
+
       .image-container {
         @include flexbox(space-between, flex-end);
         flex-direction: row;
         margin-bottom: 10px;
+        .first-element-image{
+          display: none;
+          width: 100%;
+          flex-direction: row;
+          overflow: hidden;
+        }
       }
       .image-row {
         @include flexbox(space-between, flex-end);
         flex-direction: row;
+        .two-element-image{
+          display: none;
+          width: 100%;
+          flex-direction: row;
+          overflow: hidden;
+        }
       }
     }
   }
