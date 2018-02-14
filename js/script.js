@@ -17,29 +17,26 @@ $(function () {
         var imageTabSecond = ['img/portfoliophoto4.png', 'img/portfoliophoto5.png', 'img/portfoliophoto7.png', 'img/portfolio%20photo2.png'];
 
         var container = $('.first-element-image');
-        var container1 = $('.two-element-image');
 
-        var addImg1 = $('.image1');
-        var addImg2 = $('.image2');
-        var addImg3 = $('.image3');
-        var addImg4 = $('.image4');
         for (let i = 0, j = imageTab.length; i < j; i++) {
             let img = document.createElement('img');
-            img.src = imageTab[i]; // img[i] refers to the current URL.
+            img.src = imageTab[i]; 
             container.append(img);
         }
-        // forEach (const i; in imageTabSecond.length) {
-        //     var attr = imageTabSecond[i]
-        //     container1.html('<img src="' + attr + '">');
-        //     console.log('<img src="' + attr + '">');
-        //     console.log(attr[i]);
-        // }
 
-            addImg1.attr("src",imageTabSecond[0]);
-            addImg2.attr("src",imageTabSecond[1]);
-            addImg3.attr("src",imageTabSecond[2]);
-            addImg4.attr("src",imageTabSecond[3]);
-        
+        var classTab = ['two-element-image'];
+
+        jQuery.each(classTab, function (i, val) {
+            $.each(imageTabSecond, function (j, valum) {
+                var valueImage = document.createElement('img');
+                valueImage.src = valum;
+                var cont = $("." + val);
+                cont.append(valueImage);
+
+            });
+
+        });
+
     }
 
     function hideoneClass(e) {
