@@ -15,7 +15,7 @@ $(function () {
         var container = ['first-element-image'];
         var imageTab = ['img/portfoliophoto6.png', 'img/portfoliophoto3.png', 'img/portfolio%20photo.png', 'img/portfoliophoto1.png'];
         var imageTabSecond = ['img/portfoliophoto4.png', 'img/portfoliophoto5.png', 'img/portfoliophoto7.png', 'img/portfolio%20photo2.png'];
-       
+
         $('.elements-image').hide();
         $('.first-element-image').html('').show().css({
             "display": "flex",
