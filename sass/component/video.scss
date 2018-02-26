@@ -1,31 +1,10 @@
-$colorblack: #000;
-$colorwhite: #fff;
-$mixgreen: #899196;
-
-@mixin width_height($width,$height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin flexbox($justify,$align) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin position($position,$top,$left,$right,$margin) {
-  position: $position;
-  left: $left;
-  right: $right;
-  top: $top;
-  margin: $margin;
-}
-
+@import "../settings/value.scss";
 .volume[type=range] {
   -webkit-appearance: none;
   width: 20%;
   position: absolute;
   right: 0;
+  
 }
 
 .volume[type=range]:focus {

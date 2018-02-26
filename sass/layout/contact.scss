@@ -1,0 +1,81 @@
+
+.contact {
+  @include width_height(100%, 100vh);
+  background: url("../img/contact.png") center/cover no-repeat;
+  @include flexbox(center, center);
+  .container {
+    @include width_height(90%, 90vh);
+    @include flexbox(space-between, center);
+    flex-direction: row;
+    .row {
+      @include width_height(100%, 60vh);
+      @include flexbox(space-between, flex-start);
+      flex-direction: column;
+      position: relative;
+      h2 {
+        font-size: 30px;
+        font-family: "Segoe UI", sans-serif;
+        color: $colorwhite;
+        text-transform: uppercase;
+        line-height: 0.8;
+        text-align: left;
+      }
+      > hr {
+        width: 20%;
+        border: 2px solid $colorwhite;
+        position: absolute;
+        top: 10%;
+      }
+      > form {
+        @include width_height(100%, 50vh);
+
+        @include flexbox(space-between, flex-start);
+        flex-direction: column;
+        position: relative;
+        label {
+          font-size: 14px;
+          font-family: "Segoe UI", sans-serif;
+          color: $colorwhite;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 1.714;
+        }
+        input {
+          @include width_height(466px, 56px);
+          border-width: 2px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          background-color: inherit;
+          color: $colorwhite;
+          border-radius: 5px;
+          outline: none;
+          margin-top: 10px;
+          padding: 10px;
+        }
+        textarea {
+          @include width_height(466px, 216px);
+          border-width: 2px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          background-color: inherit;
+          color: $colorwhite;
+          border-radius: 5px;
+          padding: 10px;
+          outline: none;
+          margin-top: 20px;
+        }
+      }
+    }
+    .row-text {
+      @include width_height(50%, 30vh);
+      p {
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        color: $colorwhite;
+        line-height: 1.714;
+        width: 531px;
+        height: 63px;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.portfolio {
+  @include width_height(100%, 90vh);
+  @include flexbox(center, center);
+  .container {
+    @include width_height(90%, 80vh);
+    .row {
+      position: relative;
+      @include width_height(100%, 10vh);
+      @include flexbox(flex-end, center);
+      .nav {
+        @include width_height(157px, 10vh);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include flexbox(center, center);
+        .title {
+          font-size: 30px;
+          font-family: "Segoe UI", sans-serif;
+          color: $mixgreen;
+          text-transform: uppercase;
+          line-height: 0.8;
+          text-align: left;
+        }
+        hr {
+          width: 20%;
+          @include position(absolute, "", 0, "", "");
+          bottom: 0;
+        }
+      }
+      .right {
+        position: relative;
+        @include width_height(50%, 10vh);
+        @include flexbox(space-between, center);
+        flex-direction: row;
+        .item {
+          padding: 9px;
+          font-size: 14px;
+          font-family: "Segoe UI", sans-serif;
+          color: $colorblack;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+        .item:hover {
+          color: #4bcaff;
+          border: 2px solid #4bcaff;
+          transition: 1s all ease;
+        }
+      }
+    }
+    .row-container {
+      @include width_height(100%, 74vh);
+      .elements-image {
+        width: 100%;
+        @include flexbox(space-between, center);
+        flex-direction: row;
+        img {
+          width: 220px;
+          object-fit: cover;
+          object-position: center;
+          height: 220px;
+        }
+      }
+
+      .image-container {
+        @include flexbox(space-between, flex-end);
+        flex-direction: row;
+        margin-bottom: 10px;
+        .first-element-image {
+          display: none;
+          width: 100%;
+          flex-direction: row;
+          overflow: hidden;
+          img {
+            width: 220px;
+            object-fit: cover;
+            object-position: center;
+            height: 220px;
+          }
+        }
+      }
+      .image-row {
+        @include flexbox(space-between, flex-end);
+        flex-direction: row;
+        .two-element-image {
+          display: none;
+          width: 100%;
+          flex-direction: row;
+          overflow: hidden;
+          img {
+            width: 220px;
+            object-fit: cover;
+            object-position: center;
+            height: 220px;
+          }
+        }
+      }
+    }
+  }
+}
