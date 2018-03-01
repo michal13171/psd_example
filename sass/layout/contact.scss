@@ -1,4 +1,8 @@
 
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+
+
 .contact {
   @include width_height(100%, 100vh);
   background: url("../img/contact.png") center/cover no-repeat;

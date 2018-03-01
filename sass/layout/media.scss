@@ -1,3 +1,5 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
 .whoIs {
   @include width_height(100%, 50vh);
   @include flexbox(center, center);

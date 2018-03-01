@@ -115,5 +115,29 @@ function hideoneClass(e) {
     one.hide();
   }
 }
+  function play_pause(e) {
+    e.preventDefault();
+    if (video.paused) {
+      video.play();
+      $(this).html('<i class="fas fa-play"></i>');
+    } else {
+      video.pause();
+      $(this).html('<i class="fas fa-pause"></i>');
+    }
+  }
 
-export { watchimage, watchimage_second, hideoneClass };
+  function onunmute(e) {
+    e.preventDefault();
+    var volume = e.target.value;
+    video.volume = parseFloat(volume);
+  }
+
+
+
+export {
+  watchimage,
+  watchimage_second,
+  hideoneClass,
+  play_pause,
+  onunmute
+};

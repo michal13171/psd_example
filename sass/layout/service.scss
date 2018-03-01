@@ -1,3 +1,5 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
 .service {
   @include width_height(100%, 40vh);
   @include flexbox(center, center);

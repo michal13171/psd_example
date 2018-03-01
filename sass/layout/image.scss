@@ -1,3 +1,5 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
 .portfolio {
   @include width_height(100%, 90vh);
   @include flexbox(center, center);

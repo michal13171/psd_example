@@ -1,3 +1,5 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
 .video_conference {
   @include width_height(100%, 60vh);
   @include flexbox(center, center);

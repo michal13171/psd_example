@@ -1,3 +1,6 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+
 .footer {
   @include width_height(100%,30vh);
   background-color: #353f47;
