@@ -11,6 +11,7 @@
     position: fixed;
     @include flexbox(center, center);
     flex-direction: row;
+    z-index: 3333333333;
     > .nav-list {
       @include width_height(30%, 8vh);
       @include flexbox("", center);
@@ -30,7 +31,7 @@
     > .right {
       @include width_height(35%, 8vh);
       @include flexbox(space-between, center);
-      .item {
+      a {
         padding: 9px;
         font-size: 14px;
         font-family: "Segoe UI", sans-serif;
@@ -39,7 +40,7 @@
         text-transform: uppercase;
         text-decoration: none;
       }
-      .item:hover {
+      a:hover {
         color: #4bcaff;
         border: 2px solid #4bcaff;
         transition: 1s all ease;

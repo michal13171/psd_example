@@ -27,7 +27,7 @@ if (strlen($message) < 3) {
 }
 
 if (count($error) === 0) {
-    $to = 'Papercut@Papercut.com';
+    $to = 'michal13171@wp.pl';
     $subject = "=?UTF-8?B?" . base64_encode($subject) . "?=";
     $htmlStarterStart = '
               <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">

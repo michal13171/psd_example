@@ -1,5 +1,5 @@
 "use strict";
-$(document).ready(function() {
+$(function() {
   $("form").on("submit", function(e) {
     e.preventDefault();
     const subject = $("#Fullname").val();
@@ -27,7 +27,9 @@ $(document).ready(function() {
           .html("Your name and surname:")
           .addClass("alert alert-amprove");
         labelEmail.html("Your E-mail:").addClass("alert alert-amprove");
-        labelDescription.html("Your description:").addClass("alert alert-amprove");
+        labelDescription
+          .html("Your description:")
+          .addClass("alert alert-amprove");
 
         if ("success" in response) {
           $("form").hide();
@@ -69,5 +71,35 @@ $(document).ready(function() {
         console.log(xhr);
       }
     });
+  });
+});
+
+$(function() {
+  const classNavigateOne = $(".item-bar")[0];
+  const classNavigateSec = $(".item-bar")[1];
+  const classNavigateThr = $(".item-bar")[2];
+  const classNavigateFor = $(".item-bar")[3];
+  const classNavigateFve = $(".item-bar")[4];
+
+  classNavigateOne.addEventListener("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $("#Header").offset().top }, 1000);
+  });
+  classNavigateSec.addEventListener("click", function(e) {
+    e.preventDefault();
+        $("html, body").animate({ scrollTop: $("#Service").offset().top }, 1000);
+  });
+  classNavigateThr.addEventListener("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $("#video_conference").offset().top },1000);
+  });
+  classNavigateFor.addEventListener("click", function(e) {
+    e.preventDefault();
+        $("html, body")
+          .animate({ scrollTop: $("#Portfolio").offset().top }, 1000);
+  });
+  classNavigateFve.addEventListener("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $("#Contact").offset().top }, 1000);
   });
 });
