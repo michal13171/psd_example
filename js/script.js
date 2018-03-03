@@ -6,7 +6,7 @@ import {
   play_pause,
   onunmute
 } from "./functionsImage.js";
-
+//import {validate_ajax} from "./validate.js";
 $(function() {
   $(".three").on("click", watchimage_second);
   $(".two").on("click", watchimage);
@@ -14,14 +14,18 @@ $(function() {
   $(".play").on("click", play_pause);
   $(".volume").on("change", onunmute);
   $("#video").on("timeupdate", updateProgressBar);
-  var video = document.getElementById("video");
-  var progressBar = document.querySelector(".progressBar");
+  const video = document.getElementById("video");
+  const progressBar = document.querySelector(".progressBar");
+   //$("form").on("submit", validate_ajax,true);
+
 
   watchimage();
   watchimage_second();
   hideoneClass();
   play_pause();
   onunmute();
+  //validate_ajax();
+
 
     function updateProgressBar(e) {
       e.preventDefault();
@@ -29,25 +33,8 @@ $(function() {
       progressBar.value = percentage;
       progressBar.html(percentage + "% played");
     }
+        const jsmail = $("#Email").val();
+        console.log(jsmail);
 
-  $("form").on("submit", function(e) {
-    e.preventDefault();
-    const jsmail = $("#Email").val();
-    const subject = $("#Fullname").val();
-    const message = $("#Text").val();
-    $.ajax({
-      type: $("form").attr("method"),
-      url: "../contact.php",
-      dataType: "json",
-      data: {
-        Email: jsmail,
-        Fullname: subject,
-        Text: message
-      },
-      success: function(response) {},
-      error: function(xhr) {
-        console.log(xhr);
-      }
-    });
-  });
+
 });

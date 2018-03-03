@@ -1,7 +1,5 @@
-
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
-
 
 .contact {
   @include width_height(100%, 100vh);
@@ -12,7 +10,7 @@
     @include flexbox(space-between, center);
     flex-direction: row;
     .row {
-      @include width_height(100%, 60vh);
+      @include width_height(100%, 65vh);
       @include flexbox(space-between, flex-start);
       flex-direction: column;
       position: relative;
@@ -30,19 +28,45 @@
         position: absolute;
         top: 10%;
       }
-      > form {
-        @include width_height(100%, 50vh);
 
+      .alert {
+        width: 50%;
+        padding: 0.6rem;
+        border-radius: 0.4rem;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .alert-success {
+        position: absolute;
+        margin: 0 auto;
+        @include flexbox(center, center);
+        @include width_height(85%, 100%);
+        padding: 1.3rem;
+        background-color: rgba(7, 70, 7, 0.65);
+        top: 20%;
+        color: $colorwhite;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      #formality {
+        @include width_height(100%, 55vh);
         @include flexbox(space-between, flex-start);
         flex-direction: column;
         position: relative;
+
+        .alert-amprove {
+          background-color: rgba(7, 70, 7, 0.65);
+        }
+        .alert-danger {
+          background-color: rgba(189, 54, 54, 0.6);
+        }
         label {
-          font-size: 14px;
+          font-size: 20px;
           font-family: "Segoe UI", sans-serif;
           color: $colorwhite;
           font-weight: bold;
           text-transform: uppercase;
-          line-height: 1.714;
+          margin-top: 10px;
+          display: block;
         }
         input {
           @include width_height(466px, 56px);
@@ -55,6 +79,12 @@
           outline: none;
           margin-top: 10px;
           padding: 10px;
+        }
+        .message {
+          @extend input;
+          margin-top: 10px;
+          @include width_height(466px,100px);
+          @include flexbox(center, center);
         }
         textarea {
           @include width_height(466px, 216px);
