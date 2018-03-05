@@ -1,10 +1,12 @@
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
-
+@media  
+(min-device-width: 320px)
+and
+(max-device-width: 480px)
+ {
 .contact {
-  @include width_height(100%, 100vh);
-  background: url("../img/contact.png") center/cover no-repeat;
-  @include flexbox(center, center);
+  overflow: hidden;
   .container {
     @include width_height(90%, 90vh);
     @include flexbox(space-between, center);
@@ -81,7 +83,15 @@
           padding: 10px;
         }
         .message {
-          @extend input;
+                    border-width: 2px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          background-color: inherit;
+          color: $colorwhite;
+          border-radius: 5px;
+          outline: none;
+          margin-top: 10px;
+          padding: 10px;
           margin-top: 10px;
           @include width_height(466px,60px);
           @include flexbox(center, center);
@@ -114,3 +124,4 @@
     }
   }
 }
+ }

@@ -1,0 +1,54 @@
+
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+@media  
+(min-device-width: 320px)
+and
+(max-device-width: 480px)
+ {
+.testimonials {
+  @include width_height(100%, 40vh);
+  @include flexbox(center, center);
+  .container {
+    @include width_height(90%, 40vh);
+    @include flexbox(center, center);
+    flex-direction: row;
+    .row {
+      @include width_height(100%, 30vh);
+      position: relative;
+      > h2 {
+        font-size: 30px;
+        font-family: "Segoe UI", sans-serif;
+        text-transform: uppercase;
+        line-height: 0.8;
+        text-align: left;
+      }
+      > hr {
+        @include position(absolute, 25%, 0, "", "");
+        width: 45px;
+        background-color: rgb(0, 0, 0);
+      }
+      > p {
+        @include position(absolute, 35%, 0, "", "");
+        font-size: 28px;
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.786;
+      }
+      > a {
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: bold;
+        line-height: 3.571;
+        @include position(absolute, "", 0, "", "");
+        bottom: 0;
+        color: rgb(75, 202, 255);
+      }
+      > img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+ }

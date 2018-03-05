@@ -1,0 +1,50 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .service {
+    @include width_height(100%, auto);
+    overflow: hidden;
+    .container {
+      @include width_height(95%, auto);
+      @include flexbox(center, center);
+      flex-direction: column;
+      .row {
+        @include width_height(100%, 10vh);
+        position: relative;
+        h2 {
+          font-size: 30px;
+     
+        }
+        hr {
+          width: 16%;
+          border: 1px solid $colorwhite;
+          @include position(absolute, "", 0, "", "");
+          bottom: 0;
+        }
+      }
+      .row-container {
+        @include width_height(100%, auto);
+        margin-top: 0;
+        .service-elements {
+          @include width_height(100%, 100vh);
+          @include flexbox(space-between, center);
+          flex-direction: column;
+          img {
+            @include width_height(20px, auto);
+            margin-top: 5px;
+          }
+          h3 {
+            margin-top: 5px;
+            font-size: 18px;
+          }
+          p {
+            margin-top: 5px;
+            font-size: 8px;
+            line-height: 1;
+           
+          }
+        }
+      }
+    }
+  }
+}

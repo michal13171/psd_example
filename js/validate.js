@@ -6,6 +6,7 @@ $(function() {
     const jsmail = $("#Email").val();
     const message = $("#Text").val();
     const rePlace = $(".Complete");
+
     $.ajax({
       type: $("form").attr("method"),
       url: $("form").attr("action"),
@@ -80,6 +81,21 @@ $(function() {
   const classNavigateThr = $(".item-bar")[2];
   const classNavigateFor = $(".item-bar")[3];
   const classNavigateFve = $(".item-bar")[4];
+  const toggle = $(".click_toggle");
+  const wrap = $(".right:eq(0)");
+  const imagetoggle = $(".click_toggle_img");
+  const imgwrap = $(".right:eq(1)");
+
+  toggle.on("click", function(e) {
+    e.preventDefault();
+    wrap.toggle();
+  });
+
+  imagetoggle.on("click", function(e) {
+    e.preventDefault();
+    imgwrap.toggle();
+    imgwrap.css("display"," flex");
+  });
 
   classNavigateOne.addEventListener("click", function(e) {
     e.preventDefault();
@@ -87,16 +103,20 @@ $(function() {
   });
   classNavigateSec.addEventListener("click", function(e) {
     e.preventDefault();
-        $("html, body").animate({ scrollTop: $("#Service").offset().top }, 1000);
+    $("html, body").animate({ scrollTop: $("#Service").offset().top }, 1000);
   });
   classNavigateThr.addEventListener("click", function(e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: $("#video_conference").offset().top },1000);
+    $("html, body").animate(
+      {
+        scrollTop: $("#video_conference").offset().top
+      },
+      1000
+    );
   });
   classNavigateFor.addEventListener("click", function(e) {
     e.preventDefault();
-        $("html, body")
-          .animate({ scrollTop: $("#Portfolio").offset().top }, 1000);
+    $("html, body").animate({ scrollTop: $("#Portfolio").offset().top }, 1000);
   });
   classNavigateFve.addEventListener("click", function(e) {
     e.preventDefault();

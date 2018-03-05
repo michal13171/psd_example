@@ -1,0 +1,13 @@
+* {
+  font-family: "Segoe UI", sans-serif;
+}
+@media  
+(min-device-width: 320px)
+and
+(max-device-width: 480px)
+ {
+.active {
+  color: #4bcaff;
+  border: 2px solid #4bcaff;
+}
+ }

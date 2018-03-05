@@ -1,11 +1,18 @@
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
 .header {
-  @include width_height(100%, 85vh);
+  @include width_height(100%, auto);
   background: url("../img/header.png") center/cover no-repeat;
   position: relative;
+  .click_toggle{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: $colorwhite;
+    display: none;
+  }
   > .nav {
-    @include width_height(100%, 16vh);
+    @include width_height(100%, auto);
     background-color: #3f4a51;
     opacity: 0.6;
     position: fixed;

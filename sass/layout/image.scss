@@ -28,6 +28,9 @@
           @include position(absolute, "", 0, "", "");
           bottom: 0;
         }
+        .click_toggle_img {
+          display: none;
+        }
       }
       .right {
         position: relative;
@@ -49,6 +52,7 @@
           transition: 1s all ease;
         }
       }
+      
     }
     .row-container {
       @include width_height(100%, 74vh);

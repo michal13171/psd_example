@@ -1,0 +1,83 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+@media  
+(min-device-width: 320px)
+and
+(max-device-width: 480px)
+ {
+.video_conference {
+  @include width_height(100%, 60vh);
+  @include flexbox(center, center);
+  background-color: #515f67;
+  .container {
+    @include width_height(90%, 50vh);
+    @include flexbox(center, center);
+    flex-direction: row;
+    .row {
+      @include width_height(50%, 50vh);
+      position: relative;
+      .Text_video {
+        font-size: 30px;
+        font-family: "Segoe UI", sans-serif;
+        color: $colorwhite;
+        text-transform: uppercase;
+        line-height: 0.8;
+        text-align: left;
+      }
+      hr {
+        width: 20%;
+        @include position(absolute, 36px, "", "", "");
+      }
+      p {
+        @include width_height(70%, 159px);
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        color: $colorwhite;
+        line-height: 1.714;
+        text-align: left;
+        margin-top: 40px;
+      }
+      .link_visit {
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        color: #353f46;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: inherit;
+        border: 1px solid #353f46;
+        padding: 12px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .video_element {
+      @include flexbox(center, center);
+      video {
+        @include width_height(95%, auto);
+        position: relative;
+      }
+      .element_video {
+        @include width_height(95%, 50px);
+        @include flexbox(space-between, center);
+        position: absolute;
+        bottom: 0;
+        button {
+          @include width_height(40px, 30px);
+          background-color: inherit;
+          border: none;
+          outline: none;
+          .fas {
+            color: $colorwhite;
+          }
+        }
+        .progressBar {
+          @include width_height(70%, 10px);
+          @include position(absolute, "", 0, 100px, 0 auto);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+ }

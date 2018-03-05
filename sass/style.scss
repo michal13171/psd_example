@@ -2,7 +2,6 @@
 @import "./settings/mixin.scss";
 @import "./settings/value.scss";
 @import "./component/video.scss";
-@import "./settings/mixin.scss";
 @import "./layout/head.scss";
 @import "./layout/body.scss";
 @import "./layout/service.scss";
@@ -13,3 +12,13 @@
 @import "./layout/video.scss";
 @import "./layout/contact.scss";
 @import "./layout/footer.scss";
+@import "./mobile/head.scss";
+@import "./mobile/service.scss";
+@import "./mobile/body.scss";
+@import "./mobile/image.scss";
+@import "./mobile/media.scss";
+@import "./mobile/twitter.scss";
+@import "./mobile/testimonials.scss";
+@import "./mobile/video.scss";
+@import "./mobile/contact.scss";
+@import "./mobile/footer.scss";

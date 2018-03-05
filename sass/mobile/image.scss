@@ -1,0 +1,68 @@
+@import "../settings/mixin.scss";
+@import "../settings/value.scss";
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .portfolio {
+    @include width_height(100%, auto);
+    @include flexbox(center, center);
+    overflow: hidden;
+    .container {
+      @include width_height(90%, auto);
+      .row {
+        position: relative;
+        @include width_height(100%, 70vh);
+        @include flexbox(center, center);
+        flex-direction: column;
+        .nav {
+          @include width_height(100%, 10vh);
+          top: 0;
+          @include flexbox(space-between, center);
+          .title {
+            font-size: 26px;
+          }
+          .click_toggle_img {
+            @include width_height(20%, 10vh);
+            @include flexbox(center, center);
+            background-color: inherit;
+            border: none;
+            outline: inherit;
+          }
+        }
+        .right {
+          display: none;
+          @include width_height(100%, 50vh);
+          justify-content: space-around;
+          flex-direction: column;
+        }
+      }
+      .row-container {
+        @include width_height(100%, 35vh);
+        .elements-image {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        .image-container {
+       
+          .first-element-image {
+           
+            img {
+            width: 70px;
+            height: 70px;
+            }
+          }
+        }
+        .image-row {
+        
+          .two-element-image {
+            img {
+            width: 70px;
+            height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

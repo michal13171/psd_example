@@ -1,0 +1,9 @@
+* {
+  font-family: "Segoe UI", sans-serif; }
+
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .active {
+    color: #4bcaff;
+    border: 2px solid #4bcaff; } }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJvZHkuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0NBQW9DLEVBQUU7O0FBRXhDO0VBQ0U7SUFDRSxlQUFlO0lBQ2YsMEJBQTBCLEVBQUUsRUFBRSIsImZpbGUiOiJtb2JpbGUvYm9keS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgZm9udC1mYW1pbHk6IFwiU2Vnb2UgVUlcIiwgc2Fucy1zZXJpZjsgfVxuXG5AbWVkaWEgKG1pbi1kZXZpY2Utd2lkdGg6IDMyMHB4KSBhbmQgKG1heC1kZXZpY2Utd2lkdGg6IDQ4MHB4KSB7XG4gIC5hY3RpdmUge1xuICAgIGNvbG9yOiAjNGJjYWZmO1xuICAgIGJvcmRlcjogMnB4IHNvbGlkICM0YmNhZmY7IH0gfVxuIl19 */
