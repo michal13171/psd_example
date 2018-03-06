@@ -1,48 +1,32 @@
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
-@media  
-(min-device-width: 320px)
-and
-(max-device-width: 480px)
- {
-.twitter {
-  @include width_height(100%, 30vh);
-  @include flexbox(center, center);
-  background-color: #4bcaff;
-  .container {
-    @include width_height(90%, 25vh);
-    @include flexbox(center, center);
-    flex-direction: row;
-    .row {
-      @include width_height(100%, 25vh);
-      position: relative;
-      h2 {
-        position: absolute;
-        top: 10%;
-        font-size: 30px;
-        font-family: "Segoe UI", sans-serif;
-        color: $colorwhite;
-        text-transform: uppercase;
-        line-height: 0.8;
-        text-align: left;
-      }
-      img {
-        @include position(absolute, 10%, "", 0, "");
-      }
-      hr {
-        width: 3%;
-        border: 1px solid $colorwhite;
-        @include position(absolute, 30%, "", "", "");
-      }
-      p {
-        font-size: 28px;
-        font-family: "Segoe UI", sans-serif;
-        color: $colorwhite;
-        line-height: 1.786;
-        position: absolute;
-        bottom: 0;
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .twitter {
+    @include width_height(100%, auto);
+    .container {
+      @include width_height(100%, auto);
+      @include flexbox(center, center);
+      flex-direction: column;
+      .row {
+        @include width_height(100%, 47vh);
+        h2 {
+          top: 5%;
+          left: 10px;
+          font-size: 20px;
+        }
+        img {
+          @include position(absolute, 5%, "", 10px, "");
+        }
+        hr {
+          width: 20%;
+          @include position(absolute, 15%, "", "", 10px);
+        }
+        p {
+          font-size: 18px;
+          line-height: 2rem;
+          bottom: 30px;
+        }
       }
     }
   }
 }
- }
