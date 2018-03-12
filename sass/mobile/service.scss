@@ -5,15 +5,16 @@
     @include width_height(100%, auto);
     overflow: hidden;
     .container {
-      @include width_height(95%, auto);
+      @include width_height(90%, auto);
       @include flexbox(center, center);
       flex-direction: column;
       .row {
         @include width_height(100%, 10vh);
         position: relative;
+        margin-top: 10px;
+
         h2 {
-          font-size: 30px;
-     
+          font-size: 26px;
         }
         hr {
           width: 16%;
@@ -26,22 +27,24 @@
         @include width_height(100%, auto);
         margin-top: 0;
         .service-elements {
-          @include width_height(100%, 100vh);
+          @include width_height(100%, auto);
           @include flexbox(space-between, center);
           flex-direction: column;
+          .frame {
+            @include width_height(100%, 35vh);
+          }
           img {
-            @include width_height(20px, auto);
+            @include width_height(30px, auto);
             margin-top: 5px;
           }
           h3 {
             margin-top: 5px;
-            font-size: 18px;
+            font-size: 20px;
           }
           p {
             margin-top: 5px;
-            font-size: 8px;
+            font-size: 16px;
             line-height: 1;
-           
           }
         }
       }

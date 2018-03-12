@@ -94,7 +94,6 @@ $(function() {
   imagetoggle.on("click", function(e) {
     e.preventDefault();
     imgwrap.toggle();
-    imgwrap.css("display"," flex");
   });
 
   classNavigateOne.addEventListener("click", function(e) {

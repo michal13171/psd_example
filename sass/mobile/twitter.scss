@@ -8,23 +8,23 @@
       @include flexbox(center, center);
       flex-direction: column;
       .row {
-        @include width_height(100%, 47vh);
+        @include width_height(90%, 40vh);
+            margin-top: 10px;
         h2 {
           top: 5%;
-          left: 10px;
-          font-size: 20px;
+          font-size: 26px;
         }
         img {
-          @include position(absolute, 5%, "", 10px, "");
+          @include position(absolute, 5%, "", "", "");
         }
         hr {
           width: 20%;
-          @include position(absolute, 15%, "", "", 10px);
+          @include position(absolute, 19%, "", "","");
         }
         p {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 2rem;
-          bottom: 30px;
+          bottom: 10%;
         }
       }
     }

@@ -1,37 +1,47 @@
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
-@media  
-(min-device-width: 320px)
-and
-(max-device-width: 480px)
- {
-.video_conference {
-  @include width_height(100%, auto);
-  .container {
-    @include width_height(90%, auto);
-    flex-direction: column;
-    .row {
-      @include width_height(100%, 55vh);
-      .Text_video {
-        font-size: 15px;
-        line-height: 1.4;
-        text-align: left;
-      }
-     hr{
-       top: 27px;
-     }
-      p {
-        @include width_height(100%, 159px);
-        font-size: 10px;
-        margin-top: 30px;
-      }
-    }
-    .video_element {
-      video {
-        @include width_height(100%, auto);
-      }
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .video_conference {
+    @include width_height(100%, auto);
+    .container {
+      @include width_height(90%, auto);
+      flex-direction: column;
+      margin-top: 10px;
 
+      .row {
+        @include width_height(100%, 95vh);
+        .Text_video {
+          font-size: 16px;
+          line-height: 1.4;
+          text-align: left;
+        }
+        hr {
+          top: 27px;
+        }
+        p {
+          @include width_height(100%, auto);
+          font-size: 16px;
+          margin-top: 25px;
+          text-align: left;
+        }
+      }
+      .video_element {
+        height: 40vh;
+        video {
+          @include width_height(100%, auto);
+        }
+        .element_video {
+          width: 100%;
+          .play {
+            height: 20px;
+            width: 25px;
+          }
+          .progressBar{
+            width: 65%;
+            right: 40px;
+          }
+        }
+      }
     }
   }
 }
- }

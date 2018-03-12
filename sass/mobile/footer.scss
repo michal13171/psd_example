@@ -1,40 +1,28 @@
 @import "../settings/mixin.scss";
 @import "../settings/value.scss";
-@media  
-(min-device-width: 320px)
-and
-(max-device-width: 480px)
- {
-.footer {
-  @include width_height(100%,30vh);
-  background-color: #353f47;
-  @include flexbox(center, center);
-  .container {
-    @include width_height(90%,10vh);
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  .footer {
+    @include width_height(100%, auto);
     @include flexbox(center, center);
-
-    flex-direction: row;
-    .row {
-      @include width_height(45%,10vh);
-      .footer_elemnts {
-        @include flexbox(flex-start,flex-start);
-        > a {
-          font-size: 14px;
-          font-family: "Segoe UI", sans-serif;
-          color: $colorwhite;
-          width: 80px;
-          border-right: 2px solid gray;
-          text-decoration: none;
-          padding-left: 10px;
+    .container {
+      @include width_height(90%, 30vh);
+      @include flexbox(center, center);
+      flex-direction: column;
+      .row {
+        @include width_height(100%, 10vh);
+        .footer_elemnts {
+          @include flexbox(flex-start, flex-start);
+          > a {
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
         }
-      }
-      .footer_Date {
-        font-size: 14px;
-        @include flexbox(flex-end,flex-end);
-        font-family: "Segoe UI", sans-serif;
-        color: $colorwhite;
+        .footer_Date {
+          font-size: 16px;
+          @include flexbox(center, center);
+        }
       }
     }
   }
 }
- }
