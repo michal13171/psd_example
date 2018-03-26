@@ -43,3 +43,48 @@
     }
   }
 }
+@media (min-device-width: 480px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .whoIs {
+    @include width_height(100%, auto);
+    background-size: cover;
+    background-attachment: local;
+    .container {
+      @include width_height(95%, auto);
+      flex-direction: column;
+      .row {
+        @include width_height(100%, 40vh);
+
+        > h2 {
+          font-size: 3rem;
+          top: 6%;
+          text-align: left;
+        }
+        > hr {
+          width: 20%;
+          @include position(absolute, 20%, "", "", "");
+        }
+        > p {
+          font-size: 24px;
+          line-height: 1;
+          text-align: left;
+        }
+        > .image-elements {
+          @include width_height(100%, 15vh);
+          @include position(absolute, "", "", "", "");
+          top: 0;
+          @include flexbox(space-between, center);
+          .icon {
+            @include width_height(150px, 150px);
+            border: 1px solid $colorwhite;
+            @include flexbox(center, center);
+            opacity: 0.7;
+            > img {
+              width: 55%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

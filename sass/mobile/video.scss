@@ -36,10 +36,62 @@
             height: 20px;
             width: 25px;
           }
-          .progressBar{
+          .progressBar {
             width: 65%;
             right: 40px;
           }
+        }
+      }
+    }
+  }
+}
+@media (min-device-width: 480px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .video_conference {
+    height: auto;
+    .container {
+      @include width_height(95%, auto);
+      flex-direction: column;
+      margin-top: 10px;
+
+      .row {
+        @include width_height(100%, 57vh);
+        .Text_video {
+          font-size: 3rem;
+          line-height: 1.4;
+          text-align: left;
+        }
+        hr {
+          top: 13%;
+        }
+        p {
+          @include width_height(100%, auto);
+          font-size: 24px;
+          margin-top: 25px;
+          text-align: left;
+        }
+        .link_visit {
+          padding: 12px;
+          font-size: 3rem;
+          border: 4px solid rgb(53, 63, 70);
+        }
+      }
+      .video_element {
+        height: 45vh;
+        video {
+          @include width_height(100%, auto);
+        }
+        .element_video {
+          width: 100%;
+          .play {
+            height: 60px;
+            font-size: 1.7rem;
+            width: 60px;
+          }
+          .progressBar {
+            width: 65%;
+            right: 90px;
+          }
+         
         }
       }
     }

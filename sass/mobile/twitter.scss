@@ -30,3 +30,32 @@
     }
   }
 }
+@media (min-device-width: 480px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .twitter {
+    @include width_height(100%, auto);
+    .container {
+      @include width_height(100%, auto);
+     
+      .row {
+        @include width_height(90%, 20vh);
+            margin-top: 10px;
+        h2 {
+          top: 5%;
+          font-size: 3rem;
+        }
+        img {
+          @include position(absolute, 5%, "", "", "");
+        }
+        hr {
+          width: 40%;
+          @include position(absolute, 26%, "", "","");
+        }
+        p {
+          font-size: 24px;
+          line-height: 2rem;
+          bottom: 10%;
+        }
+      }
+    }
+  }
+}

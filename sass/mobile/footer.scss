@@ -26,3 +26,29 @@
     }
   }
 }
+@media (min-device-width: 480px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer {
+    @include width_height(100%, auto);
+    @include flexbox(center, center);
+    .container {
+      @include width_height(95%, 15vh);
+      @include flexbox(center, center);
+      flex-direction: column;
+      .row {
+        @include width_height(100%, 5vh);
+        .footer_elemnts {
+          @include flexbox(center, center);
+          > a {
+            font-size: 24px;
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+        }
+        .footer_Date {
+          font-size: 24px;
+          @include flexbox(center, center);
+        }
+      }
+    }
+  }
+}
